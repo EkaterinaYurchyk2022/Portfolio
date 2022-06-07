@@ -1,0 +1,50 @@
+@import '../common/styles/sass/variables';
+
+.contactsBlock {
+  in-height: 100vh;
+  background-color: $bgColor;
+  display: flex;
+  align-items: center;
+
+
+  .contactsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 60vh;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 30px;
+
+      .input {
+        margin-bottom: 20px;
+        height: 20px;
+        background: $bgSecondColor;
+        border: 1px solid #4a4a4a;
+        font-size: 12px;
+        padding: 0 15px;
+        border-radius: 0;
+        color: $textColor;
+      }
+
+      @media screen and (max-width: 1024px) {
+        & {
+          width: 100%;
+        }
+      }
+    }
+
+    .textarea {
+      min-height: 20vh;
+
+      background: $bgSecondColor;
+      border: 1px solid #4a4a4a;
+      font-size: 12px;
+      padding: 15px;
+      border-radius: 0;
+      color: $textColor;
+    }
+  }
+}

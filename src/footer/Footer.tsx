@@ -1,8 +1,8 @@
 import React from 'react';
 import styleContainer from "../common/styles/Container.module.css";
-import s from "./Footer.module.css";
+import s from "./Footer.module.scss";
 
-function Footer() {
+export const Footer = () => {
     return (
         <div className={s.footer}>
             <div className={`${styleContainer.container} ${s.footerContainer}`}>
@@ -14,11 +14,9 @@ function Footer() {
                     <div className={s.socialIcon}></div>
 
                 </div>
-                <span className={s.copyright}>2022 All rights reserved</span>
+                <span className={s.copyright}>© 2022 All Rights Reserved</span>
             </div>
 
         </div>
     );
 };
-
-export default Footer;

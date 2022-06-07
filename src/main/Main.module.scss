@@ -1,0 +1,21 @@
+@import '../common/styles/sass/variables';
+
+
+.mainBlock {
+  height: 100vh;
+  background-color: $bgColor;
+}
+
+
+.greeting {
+  width: 300px;
+  font-family: $titleFontFamily;
+  color: $textColor;
+
+}
+
+.photo {
+  width: 300px;
+  height: 400px;
+  background-color: #9f9e9e;
+}

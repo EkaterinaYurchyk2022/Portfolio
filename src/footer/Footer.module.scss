@@ -1,0 +1,46 @@
+@import '../common/styles/sass/variables';
+
+.footer {
+  height: 30vh;
+  text-align: center;
+  padding: 40px 0;
+  color: $textColor;
+  background: $bgSecondColor;
+
+  .footerContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 10vh;
+    display: flex;
+    height: 100%;
+    width: 80%;
+    flex-wrap: wrap;
+
+
+    .title {
+      background-color: $bgSecondColor;
+
+
+      .socialIcons {
+        width: 250px;
+        background-color: $bgSecondColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .socialIcon {
+          width: 40px;
+          height: 40px;
+          color: #9f9e9e;
+          opacity: .5;
+
+        }
+      }
+    }
+
+    .copyright {
+      margin-bottom: 10px;
+    }
+  }
+}
