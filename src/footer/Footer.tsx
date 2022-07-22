@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
         <div className={s.footerBlock}>
             <div className={`${styleContainer.container} ${s.footerContainer}`}>
-                <h2 >Ekaterina Yurchyk</h2>
+                <h2>Ekaterina Yurchyk</h2>
                 <div className={s.footerContacts}>
                     <a href={'https://github.com/EkaterinaYurchyk2022'} target={'_blank'}>
                         <img src={GitHub} className={s.footerItem}/>
@@ -21,11 +21,6 @@ export const Footer = () => {
                     <a href={'mailto:ekaterina.yurchyk.s@gmail.com'}>
                         <img src={gmail} className={s.footerItem}/>
                     </a>
-              {/*      <div className={s.socialIcon}></div>
-                    <div className={s.socialIcon}></div>
-                    <div className={s.socialIcon}></div>
-                    <div className={s.socialIcon}></div>
-*/}
                 </div>
                 <div className={s.footerEnd}>© 2022 All Rights Reserved</div>
             </div>

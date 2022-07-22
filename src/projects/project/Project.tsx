@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Project.module.scss'
+import styles from './Project.module.scss'
 
 
 type ProjectPropsType = {
@@ -11,13 +11,13 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
 
     return (
-        <div className={s.project}>
-            <div className={s.image} style={props.style}>
-                <a className={s.viewBtn}>View</a>
+        <div className={styles.project}>
+            <div className={styles.image} style={props.style}>
+                <a className={styles.viewBtn}>View</a>
             </div>
-            <div className={s.projectInfo}>
-                <h3 className={s.projectTitle}>{props.title}</h3>
-                <span className={s.description}>{props.description}</span>
+            <div className={styles.projectInfo}>
+                <h3 className={styles.projectTitle}>{props.title}</h3>
+                <span className={styles.description}>{props.description}</span>
             </div>
         </div>
     );
