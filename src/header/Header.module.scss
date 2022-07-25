@@ -1,11 +1,13 @@
-@import '../common/styles/sass/variables';
+@import './../common/styles/sass/mixins';
+
 
 .header {
   height: 80px;
-  background-color: $bgColor;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-style: italic;
-  z-index: 1;
+  padding: 0 30px;
+  @include flex(row, flex-end, center, nowrap);
+  opacity: 0.9;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
 }

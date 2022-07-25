@@ -1,5 +1,7 @@
 import React from 'react';
-import styles from './Project.module.scss'
+import style from './Project.module.scss'
+import {Buffer} from "buffer";
+import Button from "../../common/components/button/Button";
 
 
 type ProjectPropsType = {
@@ -11,13 +13,13 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
 
     return (
-        <div className={styles.project}>
-            <div className={styles.image} style={props.style}>
-                <a className={styles.viewBtn}>View</a>
+        <div className={style.project}>
+            <div className={style.image} style={props.style}>
+                <Button text={'view'}/>
             </div>
-            <div className={styles.projectInfo}>
-                <h3 className={styles.projectTitle}>{props.title}</h3>
-                <span className={styles.description}>{props.description}</span>
+            <div className={style.projectInfo}>
+                <h3 className={style.projectTitle}>{props.title}</h3>
+                <span className={style.description}>{props.description}</span>
             </div>
         </div>
     );

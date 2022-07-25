@@ -1,19 +1,12 @@
-@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
 
 .hireBlock {
-  min-height: 30vh;
-  background-color: $bgSecondColor;
-  padding: 100px 0;
+  padding: 70px 0;
 
-
-  .hireContainer {
-    flex-direction: column;
-    justify-content: center;
-    in-height: 20vh;
-    text-align: center;
-
-    .indent {
-      margin-top: 15px;
-    }
+  .container {
+    @include container();
+    @include flex(column, space-between, center, nowrap);
+    height: 150px;
   }
 }

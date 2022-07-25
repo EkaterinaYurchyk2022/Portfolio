@@ -1,63 +1,55 @@
 @import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
 
-.footerBlock {
-  height: 30vh;
-  text-align: center;
-  padding: 40px 0;
-  color: $textColor;
-  background: $bgSecondColor;
+.footer {
+  min-height: 300px;
+  @include flex(row, center, stretch, nowrap);
 
-  .footerContainer {
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 10vh;
-    display: flex;
-    height: 100%;
-    width: 80%;
-    flex-wrap: wrap;
+  .container {
+    @include container();
+    @include flex(column, flex-start, center, nowrap);
+    padding: 100px 0 20px;
 
-    .footerContacts {
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-      @media screen and (max-width: 1024px) {
-        & {
-          width: 100%;
-        }
+    .socialIcons {
+      @include flex(row, space-between, center, nowrap);
+      width: 400px;
+      margin-top: 30px;
+      @media screen and (max-width: 505px) {
+        width: 100%;
       }
 
-      .footerItem {
-        width: 70px;
-        height: 70px;
+      .socialIcon {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #4a4a4a;
+        border-radius: 50%;
 
         &:hover {
-          cursor: pointer;
-          opacity: .5;
+          border: 1px solid $textColor;
+          transition: all 0.3s ease-in-out 0s;
         }
 
-        @media screen and (max-width: 500px) {
-          & {
-            width: 40px;
-            height: 40px;
-          }
-          @media screen and (max-width: 450px) {
-            & {
-              width: 35px;
-              height: 35px;
-            }
-            @media screen and (max-width: 400px) {
-              & {
-                width: 30px;
-                height: 30px;
-              }
-            }
+        @media screen and (max-width: 380px) {
+          width: 50px;
+          height: 50px;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+          @include flex(row, center, center, nowrap);
+
+          img {
+            width: 60%;
           }
         }
       }
     }
 
-    .footerEnd {
-      margin-bottom: 10px;
+    copyright {
+      margin-top: 40px;
+      @include text($textFontFamily, 14px, 1.8, 300);
+      opacity: 0.6;
     }
   }
 }

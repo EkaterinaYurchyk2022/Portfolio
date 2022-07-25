@@ -1,6 +1,5 @@
 import React from 'react';
-import s from './Projects.module.scss'
-import styleContainer from '../common/styles/Container.module.css'
+import style from './Projects.module.scss'
 import {Project} from './project/Project'
 import {Title} from '../common/components/title/Title';
 import todoImage from '../assets/image/TodoList.png'
@@ -14,16 +13,14 @@ export const Projects = () => {
         backgroundImage: `url(${todoImage})`,
     };
     return (
-        <div className={s.projectsBlock}>
-            <div className={`${styleContainer.container} ${s.projectsContainer}`}>
-                <Title text={"Projects"}/>
-                <div className={s.projects}>
-                    <Project style={social} title={"Social network"} description={"first description"}/>
-                    <Project style={todoList} title={"Todolist"} description={"second description"}/>
+        <div className={style.projectsBlock}>
+            <div className={style.container}>
+                <Title text={'Projects'}/>
+                <div className={style.projects}>
+                    <Project style={social} title={'Social network'} description={'first description'}/>
+                    <Project style={todoList} title={'Todolist'} description={'second description'}/>
                 </div>
-
             </div>
-
         </div>
     );
 };
