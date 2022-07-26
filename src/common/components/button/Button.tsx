@@ -9,7 +9,7 @@ type ButtonPropsType = {
 
 function Button(props: ButtonPropsType) {
     return (
-        <a href="" className={style.btn}>{props.text}</a>
+        <a href='' className={style.btn}>{props.text}</a>
     )
 }
 

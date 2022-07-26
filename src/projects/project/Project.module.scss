@@ -4,6 +4,7 @@
 .project {
   width: 450px;
   margin-top: 60px;
+  color: $textColor;
   @include flex(column, flex-start, stretch, nowrap);
 
   .image {
@@ -36,6 +37,7 @@
 
     .description {
       @include text($textFontFamily, 12px, 1.8, 400);
+      color: $textColor;
     }
   }
 }

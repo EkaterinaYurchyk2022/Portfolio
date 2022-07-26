@@ -40,13 +40,14 @@
           @include flex(row, center, center, nowrap);
 
           img {
-            width: 60%;
+            width: 70%;
           }
         }
       }
     }
 
     copyright {
+      color: $textColor;
       margin-top: 40px;
       @include text($textFontFamily, 14px, 1.8, 300);
       opacity: 0.6;

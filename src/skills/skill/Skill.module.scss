@@ -4,6 +4,7 @@
 .skill {
   width: 300px;
   margin-top: 60px;
+  color: $textColor;
   @include flex(column, flex-start, center, nowrap);
   @media screen and (max-width: 1128px) {
     width: 500px;
