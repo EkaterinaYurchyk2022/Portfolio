@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './Contacts.module.scss'
 import {Title} from '../common/components/title/Title';
-import Fade from 'react-reveal/Fade'
+
 
 const Fade = require('react-reveal/Fade')
 
 export const Contacts = () => {
     return (
-        <div className={style.contactsBlock}>
+        <div id='contacts' className={style.contactsBlock}>
             <div className={style.container}>
                 <Title text={'Contacts'}/>
                 <Fade left>

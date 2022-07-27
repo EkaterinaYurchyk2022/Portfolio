@@ -1,24 +1,24 @@
 import React from 'react';
 import style from './Skill.module.scss'
 
-
+const Zoom = require('react-reveal/Zoom')
 type SkillPropsType = {
-    id?: string
+    id: string
     title: string
     description?: string
-    icon?: string
+    backgroundImage: string
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = ({title, description, backgroundImage}) => {
     return (
         <div className={style.skill}>
-            <div className={style.icon}>
-                <img src={props.icon} alt=''/>
-            </div>
-            <h3 className={style.skillTitle}>{props.title}</h3>
-            <span className={style.description}>
-              {props.description}
+            <Zoom>
+                <div className={style.icon} style={{backgroundImage}}></div>
+                <h3 className={style.skillTitle}>{title}</h3>
+                <span className={style.description}>
+              {description}
             </span>
+            </Zoom>
         </div>
     );
 };

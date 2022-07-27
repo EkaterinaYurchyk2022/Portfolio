@@ -47,10 +47,13 @@
     }
 
     copyright {
-      color: $textColor;
+
       margin-top: 40px;
-      @include text($textFontFamily, 14px, 1.8, 300);
+      @include text($textFontFamily, 14px, 1.2, 300);
       opacity: 0.6;
+    }
+    span {
+      color: $textColor;
     }
   }
 }

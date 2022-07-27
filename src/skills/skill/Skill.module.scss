@@ -2,47 +2,25 @@
 @import '../../common/styles/sass/mixins';
 
 .skill {
-  width: 300px;
-  margin-top: 60px;
+  @include flex(column, center, center, nowrap);
+  width: 280px;
+  text-align: center;
+  margin: 30px 5px 0 5px;
   color: $textColor;
-  @include flex(column, flex-start, center, nowrap);
-  @media screen and (max-width: 1128px) {
-    width: 500px;
-    margin-top: 90px;
-    &:first-child {
-      margin-top: 60px;
-    }
-  }
-  @media screen and (max-width: 630px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 600px) {
-    width: 100%;
-  }
 
   .icon {
-    height: 80px;
-    width: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(45deg);
-    margin-bottom: 40px;
-    @include flex(row, center, center, nowrap);
-
-    img {
-      transform: rotate(-45deg);
-      width: 55%;
-    }
+    height: 60px;
+    width: 60px;
+    background-size: cover;
   }
 
   .skillTitle {
-    @include text($titleFontFamily, 16px, 1.2, 700);
-    text-transform: uppercase;
-    margin: 0 0 15px;
-    padding: 0;
+    @include text($titleFontFamily, 16px, 1.2, 600);
     letter-spacing: 1px;
+    margin: 20px 0;
   }
 
   .description {
-    text-align: center;
+    @include text($textFontFamily, 14px, 1.8, 400);
   }
 }
