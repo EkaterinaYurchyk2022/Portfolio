@@ -19,7 +19,7 @@ export const Contacts = () => {
 
     const onSubmit = (data: IFormInputs, e: any) => {
         e.preventDefault()
-        axios.post('https://test', {data})
+        axios.post('https://gmail-smtp-nodejs-my-server.herokuapp.com/', {data})
             .then((res) => {
                 alert('Thank you for your message');
             });
