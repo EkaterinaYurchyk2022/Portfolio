@@ -2,26 +2,30 @@ import React from 'react';
 import style from './Projects.module.scss'
 import {Project} from './project/Project'
 import {Title} from '../common/components/title/Title';
-import todoImage from '../assets/image/TodoList.png'
-import socialNetworkImage from '../assets/image/social-network-background-with-icons_23-2147497535.jpg'
+import {projectsData} from '../common/data/projects-data';
+
+const Fade = require('react-reveal/Fade')
 
 export const Projects = () => {
-    const social = {
-        backgroundImage: `url(${socialNetworkImage})`,
-    };
-    const todoList = {
-        backgroundImage: `url(${todoImage})`,
-    };
+
     return (
-        <div id='projects' className={style.projectsBlock}>
+        <div id={'projects'} className={style.projectsBlock}>
             <div className={style.container}>
-                <Title text={'Projects'}/>
+                <Fade top>
+                    <Title text={'Projects'}/>
+                </Fade>
                 <div className={style.projects}>
-                    <Project style={social} title={'Social network'} description={'first description'}/>
-                    <Project style={todoList} title={'Todolist'} description={'second description'}/>
+                    {projectsData.map(p =>
+                        <Project key={p.id}
+                                 id={p.id}
+                                 title={p.title}
+                                 description={p.description}
+                                 backgroundImage={p.backgroundImage}
+                                 repoLink={p.repoLink}
+                                 //demoLink={p.demoLink}
+                        />)}
                 </div>
             </div>
         </div>
     );
 };
-

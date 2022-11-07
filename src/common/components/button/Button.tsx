@@ -4,13 +4,11 @@ import style from './Button.module.scss'
 
 type ButtonPropsType = {
     type?: 'button' | 'submit' | 'reset' | undefined
-    text: string
+    buttonTitle: string
 }
 
-function Button(props: ButtonPropsType) {
-    return (
-        <a href='' className={style.btn}>{props.text}</a>
-    )
+export const Button: React.FC<ButtonPropsType> = ({type, buttonTitle}) => {
+    return <button type={type} className={style.btn}>{buttonTitle}</button>
 }
 
 export default Button
