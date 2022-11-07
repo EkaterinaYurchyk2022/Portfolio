@@ -24,7 +24,7 @@
         box-sizing: border-box;
         @include text(inherit, 12px, 1.5, 400);
         outline: none;
-        color: #495057;
+        color: $textColor;
         margin-bottom: 1.2rem;
 
         &:-webkit-autofill {
