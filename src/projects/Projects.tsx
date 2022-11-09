@@ -22,7 +22,6 @@ export const Projects = () => {
                                  description={p.description}
                                  backgroundImage={p.backgroundImage}
                                  repoLink={p.repoLink}
-                                 //demoLink={p.demoLink}
                         />)}
                 </div>
             </div>
